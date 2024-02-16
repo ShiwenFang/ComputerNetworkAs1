@@ -42,7 +42,7 @@ while True:
     print("in while loop")
     # TODO: Receive RPC request from client
     rpc_data, client_address = server_socket.recvfrom(1024)
-
+    print("message receive")
     print(f"Received data: {rpc_data}")
     print(f"Received client_address: {client_address}")
     # TODO: Turn byte array that you received from client into a string variable called rpc_data
