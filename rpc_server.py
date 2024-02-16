@@ -15,6 +15,7 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 # Setup signal handler to exit gracefully
 def cleanup(sig, frame):
     # TODO Close server's socket
+    server_socket.close()
     sys.exit(0)
 
 # SIGINT is sent when you press ctrl + C, SIGTERM if you use 'kill' or leave the shell

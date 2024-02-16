@@ -32,6 +32,7 @@ for i in range(NUM_TRANSMISSIONS):
     result_data, _ = client_socket.recvfrom(1024)
 
     # TODO: Display it in the format "prime: yes" or "prime: no"
+    print(f"sent: prime({data})")
     print(f"prime: {result_data.decode()}")
 
 # TODO: Close any sockets that are open
