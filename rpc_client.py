@@ -27,7 +27,8 @@ for i in range(NUM_TRANSMISSIONS):
 
     # TODO: Send RPC request (i.e., rpc_data) to the server
     client_socket.sendto(rpc_data, (server_address, server_port))
-
+    print(f"sent: prime({data})")
+    print(f"sent to server_address: ({server_address})")
     # TODO: Receive result back from the server into the variable result_data
     result_data, _ = client_socket.recvfrom(1024)
 
