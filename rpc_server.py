@@ -26,6 +26,11 @@ signal.signal(signal.SIGTERM, cleanup)
 # TODO: Bind it to server_port
 server_socket.bind(('', server_port))
 
+# After binding the socket, print the server's IP Address and port
+hostname = socket.gethostname()
+server_ip = socket.gethostbyname(hostname)
+print(f"Server is running on IP: {server_ip}, Port: {server_port}")
+
 def is_prime(n):
     """Function to check if a number is prime."""
     if n <= 1:
