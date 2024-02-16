@@ -1,5 +1,6 @@
 import sys
 import signal
+import socket
 
 NUM_TRANSMISSIONS = 10
 if len(sys.argv) < 2:
