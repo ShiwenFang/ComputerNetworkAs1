@@ -36,7 +36,7 @@ def is_prime(n):
 
 
 while True:
-    pass
+    
     # TODO: Receive RPC request from client
     rpc_data, client_address = server_socket.recvfrom(1024)
 
