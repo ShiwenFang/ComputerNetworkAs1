@@ -17,14 +17,15 @@ server_port = int(sys.argv[2])
 
 # TODO: Create a datagram socket for the client
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-
+print("for loop will start")
 # Repeat NUM_TRANSMISSIONS times
 for i in range(NUM_TRANSMISSIONS):
     data = random.randint(0, 100)
-
+    print(f"for loop {i} started")
     # TODO: encode this data somehow (representing the integer as a string is fine)
     rpc_data = f"prime({data})".encode()
-
+    print(f"will send: prime({data})")
+    print(f"Will send: prime encode: ({rpc_data})")
     # TODO: Send RPC request (i.e., rpc_data) to the server
     client_socket.sendto(rpc_data, (server_address, server_port))
     print(f"sent: prime({data})")
